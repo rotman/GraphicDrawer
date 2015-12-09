@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.rotem.computergraphics.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <Button
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+            android:id="@+id/lineButton"
+        android:text="line" android:onClick="drawLine"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="circle"
+            android:onClick="drawCircle"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="polygon"
+            android:onClick="drawPolygon"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="curve"
+            android:onClick="drawCurve"/>
+
+    </LinearLayout>
+
+    
+    <com.example.rotem.computergraphics.CanvasView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/canvas"
+        android:layout_below="@+id/linearLayout"
+        android:layout_above="@+id/button" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        android:layout_alignParentBottom="true"
+        android:onClick="clearCanvas"
+        android:id="@+id/button" />
+
+
+</RelativeLayout>
